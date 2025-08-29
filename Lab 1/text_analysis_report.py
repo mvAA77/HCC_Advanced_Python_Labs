@@ -6,11 +6,15 @@
 flag = True
 while flag == True:
     try:
-        in = input("Enter The Path and Name of the Text File: ")
-        text_file = open(in, 'r')
+        user_input = input("Enter The Path and Name of the Text File: ")
+        text_file = open(user_input, 'r')
         flag = False
     except OSError:
         print("Error: file(s) not found or could not be opened")
         print("Please re-enter\n")
+
+ for line in text_file:
+    line = line.rstrip()
+
 
 
