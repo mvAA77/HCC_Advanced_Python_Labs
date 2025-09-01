@@ -22,7 +22,7 @@ circumference = (2 * PI)* radius
 surface_area = 4 * PI * (radius ** 2)
 volume = (4/3) * PI * (radius ** 2)
 
-/* Prints all the calculated values. The number values have to be converted
+# Prints all the calculated values. The number values have to be converted
   
 print("\nSphere Diamater: " + str(diameter))
 print("Sphere Circumference: " + str(circumference))
