@@ -34,23 +34,20 @@ class Array:
         return self.logicalSize
     
     def grow(self):
-        """Double the capacity of the array"""
         current_capacity = len(self.items)
         new_capacity = current_capacity * 2
         for i in range(current_capacity, new_capacity):
             self.items.append(self.fill_value)
     
     def shrink(self):
-        """Reduce capacity by half if logical size is less than 1/4 of capacity"""
         current_capacity = len(self.items)
-        if current_capacity <= 2:  # Minimum threshold
+        if current_capacity <= 2: 
             return
         
         if self.logicalSize < current_capacity // 4:
-            new_capacity = max(2, current_capacity // 2)  # Don't go below 2
+            new_capacity = max(2, current_capacity // 2)
             self.items = self.items[:new_capacity]
 
-# Test driver
 if __name__ == "__main__":
     arr = Array(2)
     arr[0] = "A"
